@@ -4,19 +4,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite App</title>
-  <link rel="stylesheet" href="./src/toast/style.css">
+  <title>Lib Toast</title>
+  <link rel="stylesheet" href="./src/toast/toast.scss">
 </head>
 
 <body>
 
   <button class="toast">Gerar toast</button>
 
+  
 
 
-  <script src="./src/toast/toast.js"></script>
-  <script>
-    toast.init();
+  <script type="module" src="./src/toast/toast.js"></script>
+
+  <script  type="module">
+    import { toast } from "./src/toast/toast.js";
+
+    document.querySelector('.toast').addEventListener('click', () => {
+      toast.show({
+        text: '🦄 Ponei!',
+        position: 'top-left',
+        time: 5000,
+        type: 'error'
+      });
+    });
   </script>
 </body>
 

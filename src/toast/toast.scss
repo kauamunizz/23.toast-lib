@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .toast {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: .6s;
+
+    &:hover {
+      border-color: #646cff;
+      transform: scale(1.2);
+      transition: .6s;
+    }
+  }
+
+  .toast-lib {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    // // top: 15px;
+    // // right: 15px;
+    width: auto;
+
+    &.toast-top-right {
+      top: 15px;
+      right: 15px;
+    }
+
+    &.toast-top-left {
+      top: 15px;
+      left: 15px;
+    }
+  
+    &.toast-top-center {
+      top: 15px;
+      left: 50%;
+      translate: -50%;
+    }
+  
+    /* Toast Bottom */
+  
+    &.toast-bottom-rigth {
+      bottom: 15px;
+      right: 15px;
+    }
+  
+    &.toast-bottom-left {
+      bottom: 15px;
+      left: 15px;
+    }
+  
+    &.toast-bottom-center {
+      bottom: 15px;
+      left: 50%;
+      translate: -50%;
+    }
+
+    .toast-background {
+      width: 300px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      // position: absolute;
+      border-radius: 20px;
+      padding: 10px;
+      background-color: #fff;
+      color: rgba(0, 0, 0, 0.8);
+  
+      /* Toast Top */
+  
+      &.top-right {
+        top: 15px;
+        right: 15px;
+        margin-bottom: 15px;
+      }
+    
+      &.top-left {
+        top: 15px;
+        left: 15px;
+        margin-bottom: 15px;
+      }
+    
+      &.top-center {
+        top: 15px;
+        left: 50%;
+        translate: -50%;
+        margin-bottom: 15px;
+      }
+    
+      /* Toast Bottom */
+    
+      &.bottom-rigth {
+        bottom: 15px;
+        right: 15px;
+        margin-bottom: 15px;
+      }
+    
+      &.bottom-left {
+        bottom: 15px;
+        left: 15px;
+        margin-bottom: 15px;
+      }
+    
+      &.bottom-center {
+        bottom: 15px;
+        left: 50%;
+        translate: -50%;
+        margin-bottom: 15px;
+      }
+  
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  
+        svg {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+}
+
+  
+// type
+// info, success, warning, error
