@@ -1,139 +1,38 @@
 "strict mode"
 
 const toast = (() => {
-  /* Toast Top Left */
-  function generateToastTopLeft() {
+  function generateToast(config) {
     document.querySelector('body').insertAdjacentHTML('afterbegin', /* html */
-    `
-      <div class="toast-left">
-        <span>🦄 Wow so easy!</span>
-      </div>
-    `);
-    
-    
-    const toastMade = document.querySelector('.toast-left');
-    toastMade.style.display = 'flex';
-    
-    setTimeout(() => {
-      toastMade.style.display = 'none';
-      
-    }, 5000);
-  }
-  
-  /* Toast Top Center */
-  function generateToastTopCenter() {
-    document.querySelector('body').insertAdjacentHTML('afterbegin', /* html */
-    `
-      <div class="toast-center">
-        <span>🦄 Wow so easy!</span>
-      </div>
-    `);
-    
-    
-    const toastMade = document.querySelector('.toast-center');
-    toastMade.style.display = 'flex';
-    
-    setTimeout(() => {
-      toastMade.style.display = 'none';
-      
-    }, 5000);
-  }
-  
-  /* Toast Top Right */
-  function generateToastTopRight() {
-    document.querySelector('body').insertAdjacentHTML('afterbegin', /* html */
-    `
-      <div class="toast-rigth">
-        <span>🦄 Wow so easy!</span>
-      </div>
-    `);
-    
-    
-    const toastMade = document.querySelector('.toast-rigth');
-    toastMade.style.display = 'flex';
-    
-    setTimeout(() => {
-      toastMade.style.display = 'none';
-      
-    }, 5000);
-  }
+      `
+        <div class="${config.position} ">
+          <span>${config.text}</span>
+        </div>
+      `
+    );
 
-  /* Toast Bottom Left */
-  function generateToastBottomLeft() {
-    document.querySelector('body').insertAdjacentHTML('afterbegin', /* html */
-    `
-      <div class="toast-left-bt">
-        <span>🦄 Wow so easy!</span>
-      </div>
-    `);
-    
-    
-    const toastMade = document.querySelector('.toast-left-bt');
-    toastMade.style.display = 'flex';
-    
-    setTimeout(() => {
-      toastMade.style.display = 'none';
-      
-    }, 5000);
-  }
-  
-  /* Toast Bottom Center */
-  function generateToastBottomCenter() {
-    document.querySelector('body').insertAdjacentHTML('afterbegin', /* html */
-    `
-      <div class="toast-center-bt">
-        <span>🦄 Wow so easy!</span>
-      </div>
-    `);
-    
-    
-    const toastMade = document.querySelector('.toast-center-bt');
-    toastMade.style.display = 'flex';
-    
-    setTimeout(() => {
-      toastMade.style.display = 'none';
-      
-    }, 5000);
-  }
-  
-  /* Toast Bottom Right */
-  function generateToastBottomRight() {
-    document.querySelector('body').insertAdjacentHTML('afterbegin', /* html */
-    `
-      <div class="toast-rigth-bt">
-        <span>🦄 Wow so easy!</span>
-      </div>
-    `);
-    
-    
-    const toastMade = document.querySelector('.toast-rigth-bt');
-    toastMade.style.display = 'flex';
-    
-    setTimeout(() => {
-      toastMade.style.display = 'none';
-      
-    }, 5000);
-  }
+    const toastMade = document.querySelector(`.${config.position}`);
 
+    setTimeout(() => {
+      toastMade.style.display = 'none';
+
+    }, `${config.time}`);
+  }
 
   function events() {
-    document.querySelector('.toast-top-right').addEventListener('click', generateToastTopRight);
+    document.querySelector('.toast').addEventListener('click', () => {
+      generateToast({
+        text: '🦄 Wow so easy!',
+        position: 'bottom-center',
+        time: 5000,
+        type: 'success'
+      });
+    });
 
-    document.querySelector('.toast-top-left').addEventListener('click', generateToastTopLeft);
-
-    document.querySelector('.toast-top-center').addEventListener('click', generateToastTopCenter);
-
-    document.querySelector('.toast-bottom-right').addEventListener('click', generateToastBottomRight);
-
-    document.querySelector('.toast-bottom-center').addEventListener('click', generateToastBottomCenter);
-    
-    document.querySelector('.toast-bottom-left').addEventListener('click', generateToastBottomLeft);
 
   }
 
 
   function init() {
-
     events();
   }
 

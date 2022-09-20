@@ -49,10 +49,10 @@ button:hover {
 
 /* Toast top */
 
-.toast-rigth {
-  display: none;
+.top-right {
   width: 300px;
   height: 80px;
+  display: flex;
   align-items: center;
   position: absolute;
   background-color: #fff;
@@ -63,10 +63,10 @@ button:hover {
   color: rgba(0, 0, 0, .8);
 }
 
-.toast-left {
-  display: none;
+.top-left {
   width: 300px;
   height: 80px;
+  display: flex;
   align-items: center;
   position: absolute;
   background-color: #fff;
@@ -77,8 +77,8 @@ button:hover {
   color: rgba(0, 0, 0, .8);
 }
 
-.toast-center {
-  display: none;
+.top-center {
+  display: flex;
   width: 300px;
   height: 80px;
   align-items: center;
@@ -94,8 +94,8 @@ button:hover {
 
 /* Toast Bottom */
 
-.toast-rigth-bt {
-  display: none;
+.bottom-rigth {
+  display: flex;
   width: 300px;
   height: 80px;
   align-items: center;
@@ -108,8 +108,8 @@ button:hover {
   color: rgba(0, 0, 0, .8);
 }
 
-.toast-left-bt {
-  display: none;
+.bottom-left {
+  display: flex;
   width: 300px;
   height: 80px;
   align-items: center;
@@ -122,8 +122,8 @@ button:hover {
   color: rgba(0, 0, 0, .8);
 }
 
-.toast-center-bt {
-  display: none;
+.bottom-center {
+  display: flex;
   width: 300px;
   height: 80px;
   align-items: center;
