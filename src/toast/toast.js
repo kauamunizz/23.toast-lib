@@ -39,12 +39,10 @@ const toast = (() => {
     
   }
 
-
   (function () {
     createContainer();
     events();
   })();
-
 
   return {
     show
